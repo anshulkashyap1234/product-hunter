@@ -1,0 +1,1 @@
+this is a webbased app to check to minimum price of a product in amazon and flipkart and show best offer in both sides
