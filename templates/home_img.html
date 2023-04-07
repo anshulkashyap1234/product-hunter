@@ -6,106 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  
-    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+
+
+
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
-
-
-
-        html {
-            font-size: 62.5%;
-            overflow-x: auto;
-            overflow-y: auto;
-
-        }
-
-        body {
-
-            font-family: "Poppins", sans-serif;
-        }
-
-
-
-
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: .2rem 5%;
-            height: 6.5rem;
-            background-color: #fff;
-            box-shadow: 0 1px 4px rgba(64, 75, 87, 0.3);
-        }
-
-        .logo {
-
-            text-decoration: none;
-            font-size: 3.2rem;
-        }
-
-        header .logo:hover {
-            color: #fc8c05;
-        }
-
-        header .navbar {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        header .navbar a {
-            margin-left: 2.5rem;
-            font-size: 1.57rem;
-            color: #0e2431;
-            font-weight: 600;
-            text-decoration: none;
-
-        }
-
-        header .navbar a.active,
-        header .navbar a:hover {
-            color: #011aff;
-            border-bottom: 0.2rem solid #011aff;
-            padding: 0.5rem 0;
-        }
-
-        .active {
-            color: #011aff;
-            border-bottom: 0.2rem solid #011aff;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         .productsearch {
 
@@ -123,175 +31,332 @@
 
         }
 
-        .productsearch form {
+        .heading{
+            font-size: 3.4rem;
+            font-weight: 600;
+            color: #2c3cc8
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+        .body {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+      
+
+        .content_container {
+            width: 100%;
             display: flex;
             justify-content: center;
-            flex-direction: row;
+            align-items: center;
+            flex-direction: column;
+            height: 50vh;
+            gap: 10px;
+        }
+         .main_container1{
+            border-radius: 18px;
+            background: #fff;
+
+
+            box-shadow: 5px 5px 10px #2a50ea;
             width: 50%;
+
+            height: 39rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+      
+            
         }
 
-        #product {
+        .main_container {
+            border-radius: 18px;
+            background: #fff;
 
-            width: 100%;
-            height: 40px;
+
+            box-shadow: 5px 5px 10px #7995e7;
+            width: 80%;
+
+            height: 42rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 60px;
+            margin-top: 60px;
+        }
+
+
+
+
+        .hset {
+            aspect-ratio: 3/2;
+            object-fit: contain;
+            width: 240px;
+            margin: 46px 25px 0px 10px;
+        }
+
+        .hset:hover {
+            animation: jello-diagonal .9s linear both;
+            cursor: pointer;
+        }
+
+        @keyframes jello-diagonal {
+            0% {
+                transform: skew(0deg 0deg)
+            }
+
+            30% {
+                transform: skew(25deg 25deg)
+            }
+
+            40% {
+                transform: skew(-15deg, -15deg)
+            }
+
+            50% {
+                transform: skew(15deg, 15deg)
+            }
+
+            65% {
+                transform: skew(-5deg, -5deg)
+            }
+
+            75% {
+                transform: skew(5deg, 5deg)
+            }
+
+            100% {
+                transform: skew(0deg 0deg)
+            }
+        }
+
+       
+        .sp-label {
+            background: #3b53f0;
+            color: #fff;
+            font-weight: 300;
+            font-size: 14px;
+            width: fit-content;
+            padding: 4px 17px;
+            border-radius: 99px;
+            font-family: 'poppins';
 
         }
 
-        .button {
+        .sp-label:hover {
+            animation: shake-horizontal 1.1s linear both;
+            cursor: pointer;
+        }
 
-            width: 20%;
-            height: 40px;
+        @keyframes shake-horizontal {
+
+            0%,
+            100% {
+                transform: translateX(0)
+            }
+
+            10%,
+            30%,
+            50%,
+            70% {
+                transform: translateX(-10px)
+            }
+
+            20%,
+            40%,
+            60% {
+                transform: translateX(10px)
+            }
+
+            80% {
+                transform: translateX(8px)
+            }
+
+            90% {
+                transform: translateX(-8px)
+            }
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'poppins';
+
+        }
+
+
+        .new-price {
+            font-weight: 600;
+            font-size: 28px;
+            font-family: 'poppins';
+
+        }
+
+        .new-price:hover {
+            animation: shake-horizontal 0.8s linear both;
+            cursor: pointer;
+        }
+
+        @keyframes shake-horizontal {
+
+            0%,
+            100% {
+                transform: translateX(0)
+            }
+
+            10%,
+            30%,
+            50%,
+            70% {
+                transform: translateX(-10px)
+            }
+
+            20%,
+            40%,
+            60% {
+                transform: translateX(10px)
+            }
+
+            80% {
+                transform: translateX(8px)
+            }
+
+            90% {
+                transform: translateX(-8px)
+            }
+        }
+
+        .offer-info {
+            color: #111114;
+            font-size: 12px;
+
+
+        }
+
+        .buy-btn {
+
             background: #4787e9;
             color: #fff;
             text-decoration: none;
             font-size: 14px;
-            padding: 12px 40px;
-
+            padding: 12px 140px;
+            border-radius: 5px;
             box-shadow: 0px 5px 0px #1e56f1;
             transition: .3s ease;
             border: none;
             font-family: 'Poppins';
-
         }
 
-        .button:hover {
+        .buy-btn:hover {
             background: #3c7ad8;
             box-shadow: 0px 3px 0px #1e56f1;
             cursor: pointer;
             transform: scale(0.95);
-
-        }
-.conatiner_mar{
-    position: relative;
-            top: 70px;
-            color: rgb(218, 51, 51);
-            font-size: 2rem;
-}
-        .conatiner {
-            position: relative;
-            top: 100px;
-            margin-bottom: 40px;
-
-
-
-            overflow-y: auto;
-
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-
-
-
         }
 
-        .conatiner1 {
-            position: relative;
-            top: 120px;
-
-
-
-            width: 100%;
-            min-height: 80vh;
-            overflow-y: auto;
-
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-
-
-
-        }
-
-        .box {
-            display: flex;
-            width: 750px;
-            height: 300px;
-            justify-content: space-evenly;
-            align-items: center;
-            border-radius: 61px;
-background: linear-gradient(145deg, #cacaca, #f0f0f0);
-box-shadow:  35px 35px 49px #5a5a5a,
-             -35px -35px 49px #ffffff;
-             padding: 30px;
-
-            gap: 10%;
-            border-radius: 40px;
-
-        }
-
-        .box h1 {
-            color: rgb(65, 62, 62);
-        }
-        .box img{
-            width: 89%;
-            aspect-ratio: 3/2;
-            object-fit: contain;
-            mix-blend-mode: color-burn;
-        }
-
-        .page {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: auto;
-            flex-direction: column;
-        }
-        .page h1{
-            color: #011aff;
-        }
-
-        .button:active {
+        .buy-btn:active {
             transform: scale(0.9);
         }
 
-        th {
-            background-color: #4238a9;
-            color: white;
-
-font-size: 1.3rem;
-
-
-        }
-
-        tr {
-
-            font-size: 1rem;
+        .green-dot {
+            background: #00d889;
+            width: 16px;
+            height: 16px;
+            border-radius: 99px;
 
         }
 
+        .stock-pcs {
 
-        tr:nth-child(odd) {
-            background-color: #eee;
+            font-size: 12px;
+            margin-top: -16px
         }
 
-        tr:nth-child(even) {
-            background-color: #fff;
+        .add-to-cart-btn {
+            transition: .3s ease;
+
+            padding: 8px 24px 18px 24px;
+            background: #fff;
+            border: 1px solid #c1c1c1;
+            border-radius: 6px;
+            font-family: 'Poppins';
+            font-size: 12px;
         }
 
-        tr:hover {
-            background-color: #ffff99;
+        .add-to-cart-btn svg {
+            position: relative;
+            top: 7px;
+            right: 6px;
         }
 
-   
+        .add-to-wl-btn {
+            transition: .3s ease;
 
-        .best_item {
-            font-size: 1.2rem;
-            gap: 10px;
-        }
-.best_item p{
-    font-size: 2rem;
-}
-        .flipkart_data {
-
-            width: 100%;
+            padding: 8px 24px 18px 24px;
+            background: #fff;
+            border: 1px solid #c1c1c1;
+            border-radius: 6px;
+            font-family: 'Poppins';
+            font-size: 12px;
+            margin-bottom: 62px;
         }
 
-        .flipkart_data td {
-            font-size: 1rem;
+        .add-to-wl-btn svg {
+            position: relative;
+            top: 7px;
+            right: 6px;
+        }
+
+        .add-to-cart-btn:hover,
+        .add-to-wl-btn:hover {
+            cursor: pointer;
+            background: #4787e9;
+            color: #fff;
+            transform: scale(0.95);
+        }
+
+        .add-to-cart-btn:active,
+        .add-to-wl-btn:active {
+            transform: scale(0.92);
+        }
+
+
+
+        .close-prev-btn:hover {
+            cursor: pointer;
+            transform: scale(0.8);
+        }
+
+
+
+        .details {
+            position: relative;
+            top: -12%;
+            left: -5%;
+            width: 300px;
+            font-weight: 600;
+            font-size: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .download{
+            color:rgb(34, 32, 32);
+            position: absolute;
+            right: 20%;
+        }
+        .download:hover{
+            color: #47430c;
         }
     </style>
+
 </head>
 
 <body>
@@ -312,15 +377,16 @@ font-size: 1.3rem;
         </nav>
 
     </header>
- <div class="conatiner_mar">
+    <div class="conatiner_mar">
 
-     <marquee behavior="services" direction="left">
-         
-         this is the website to check the price of prouct in many sides and gives the best result and best price of product this website is not legal not use in on production work
-         
+        <marquee behavior="services" direction="left">
+
+            this is the website to check the price of prouct in many sides and gives the best result and best price of
+            product this website is not legal not use in on production work
+
         </marquee>
     </div>
-   
+
 
 
     <div class="productsearch">
@@ -330,61 +396,232 @@ font-size: 1.3rem;
         </form>
         <p>{{error}}</p>
     </div>
-    <div class="conatiner1" >
-        <div class="box">
+    <div class="conatiner1">
+        
+        
+        
+        
+        <h1 class="heading">best product for you</h1>
+        <div class="main_container1">
+            <div class="image_container">
+                <img  class="hset" src="{{img}}">
 
 
-            <div class="image">
-                <img src="{{image}}"  width="230" height="300" alt="">
+
             </div>
-            <div class="best_item">
-                <h1>{{webname}}</h1>
-                <br>
-                <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
 
+            <div>
 
-                    <p>
-                        {{best_item}}
-                    </p>
+                <p class="sp-label">{{e_name}}</p>
+                <h1 class="title">{{name}}</h1>
+                <p class="offer-info">{{rating}} </p>
+                <p class="new-price">₹ {{price}}</p>
+                <a href="{{link}}">
+
+                    <button href="{{link}}" onclick="showAlert('Product added to cart!')" class="buy-btn">Buy
+                        it</button>
+                </a>
+                <div>
+
                     <br>
-                    <p>
 
-                        {{best_price}}
-                    </p>
-                    <p>
-
-                        <a href="{{link}}" >
-                            {{show}}
-                        </a>
-                    </p>
                 </div>
+                <button class="add-to-cart-btn" onclick="showAlert('Product added to cart!')">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-scale" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <line x1="7" y1="20" x2="17" y2="20"></line>
+                        <path d="M6 6l6 -1l6 1"></path>
+                        <line x1="12" y1="3" x2="12" y2="20"></line>
+                        <path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path>
+                        <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path>
+                    </svg>
+                    Add to cart</button>
 
+                <button class="add-to-wl-btn" onclick="showAlert('Product added to your Wishlist!')"
+                    style="margin-left: 6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572">
+                        </path>
+                    </svg>
+                    Add to wishlist</button>
+            </div><!-- ./ card -->
+
+
+            <!-- partial -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <br>
+    <br>
+    <br>
+
+</body>
+
+<div class="body">
+    
+        <h1 class="heading">more options         <a  class="download" href="{{url_for('get_trans_history')}}">download</a></h1>
+
+
+        {% for i in amazon %}
+        <div class="content_container">
+    
+    
+    
+            <div class="main_container">
+                <div class="image_container">
+                    <img  class="hset" src="{{i[3]}}">
+    
+    
+    
+                </div>
+                <div class="details">
+                    <ul>
+    
+                        {% for j in i[4]%}
+                        <li>{{j}}</li>
+                        {% endfor %}
+                    </ul>
+    
+                </div>
+                <div>
+    
+                    <p class="sp-label">amazon</p>
+                    <h1 class="title">{{i[0]}}</h1>
+                    <p class="offer-info">{{i[5]}}</p>
+                    <p class="new-price">₹ {{i[1]}}</p>
+                    <a href="{{i[2]}}">
+    
+                        <button href="#" onclick="showAlert('Product added to cart!')" class="buy-btn">Buy
+                            it</button>
+                    </a>
+                    <div>
+    
+                        <br>
+    
+                    </div>
+                    <button class="add-to-cart-btn" onclick="showAlert('Product added to cart!')">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-scale" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <line x1="7" y1="20" x2="17" y2="20"></line>
+                            <path d="M6 6l6 -1l6 1"></path>
+                            <line x1="12" y1="3" x2="12" y2="20"></line>
+                            <path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path>
+                            <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path>
+                        </svg>
+                        Add to cart</button>
+    
+                    <button class="add-to-wl-btn" onclick="showAlert('Product added to your Wishlist!')"
+                        style="margin-left: 6px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572">
+                            </path>
+                        </svg>
+                        Add to wishlist</button>
+                </div><!-- ./ card -->
+    
+    
+                <!-- partial -->
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+    
+    
+    
             </div>
         </div>
-    </div>
-    <div class="conatiner">
-        <div class=page>
-            <h1>{{name[0]}}</h1>
-            {% for table in tables_amazon %}
+    
+        {% endfor %}
+    
+    {% for i in flipkart %}
+    <div class="content_container">
 
-            {{ table|safe }}
-            {% endfor %}
+
+
+        <div class="main_container">
+            <div class="image_container">
+                <img  class="hset" src="{{i[3]}}">
+
+
+
+            </div>
+            <div class="details">
+                <ul>
+
+                    {% for j in i[4]%}
+                    <li>{{j}}</li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+            <div>
+
+                <p class="sp-label">flipkart</p>
+                <h1 class="title">{{i[0]}}</h1>
+                <p class="offer-info">{{i[5]}}</p>
+                <p class="new-price">₹ {{i[1]}}</p>
+                <a href="{{i[2]}}">
+
+                    <button href="#" onclick="showAlert('Product added to cart!')" class="buy-btn">Buy
+                        it</button>
+                </a>
+                <div>
+
+                    <br>
+
+                </div>
+                <button class="add-to-cart-btn" onclick="showAlert('Product added to cart!')">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-scale" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <line x1="7" y1="20" x2="17" y2="20"></line>
+                        <path d="M6 6l6 -1l6 1"></path>
+                        <line x1="12" y1="3" x2="12" y2="20"></line>
+                        <path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path>
+                        <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path>
+                    </svg>
+                    Add to cart</button>
+
+                <button class="add-to-wl-btn" onclick="showAlert('Product added to your Wishlist!')"
+                    style="margin-left: 6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572">
+                        </path>
+                    </svg>
+                    Add to wishlist</button>
+            </div><!-- ./ card -->
+
+
+            <!-- partial -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+
+
+
         </div>
-        <div class=page>
-            <h1>{{name[1]}}</h1>
-
-            {% for table in tables_flipkart %}
-
-            {{ table|safe }}
-            {% endfor %}
-        </div>
-
     </div>
 
-    <div>
+    {% endfor %}
+    
+</div>
 
-    </div>
- 
-</body>
+
 
 </html>

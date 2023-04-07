@@ -5,431 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="30">
-    <title>Document</title>
-  
-    <script src=
-    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-        </script>
-        
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
+    <title>Product Hunting</title>
 
-
-        html {
-            font-size: 62.5%;
-            overflow-x: auto;
-            overflow-y: auto;
-
-        }
-
-        body {
-
-            font-family: "Poppins", sans-serif;
-        }
-
-
-
-
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: .2rem 5%;
-            height: 6.5rem;
-            background-color: #fff;
-            box-shadow: 0 1px 4px rgba(64, 75, 87, 0.3);
-        }
-
-        .logo {
-
-            text-decoration: none;
-            font-size: 3.2rem;
-        }
-
-        header .logo:hover {
-            color: #fc8c05;
-        }
-
-        header .navbar {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        header .navbar a {
-            margin-left: 2.5rem;
-            font-size: 1.57rem;
-            color: #0e2431;
-            font-weight: 600;
-            text-decoration: none;
-
-        }
-
-        header .navbar a.active,
-        header .navbar a:hover {
-            color: #011aff;
-            border-bottom: 0.2rem solid #011aff;
-            padding: 0.5rem 0;
-        }
-
-        .active {
-            color: #011aff;
-            border-bottom: 0.2rem solid #011aff;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        .productsearch {
-
-            position: relative;
-            top: 130px;
-            display: flex;
-
-            font-size: 3.5rem;
-            font-weight: 600;
-            color: rgb(29, 53, 83);
-            font-family: nunito;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .productsearch form {
-
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            width: 50%;
-        }
-
-        #product {
-
-            width: 100%;
-            height: 40px;
-
-        }
-
-        .button {
-
-            width: 20%;
-            height: 40px;
-            background: #4787e9;
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-            padding: 12px 40px;
-
-            box-shadow: 0px 5px 0px #1e56f1;
-            transition: .3s ease;
-            border: none;
-            font-family: 'Poppins';
-
-        }
-
-        .button:hover {
-            background: #3c7ad8;
-            box-shadow: 0px 3px 0px #1e56f1;
-            cursor: pointer;
-            transform: scale(0.95);
-
-        }
-.conatiner_mar{
-    position: relative;
-            top: 70px;
-            color: rgb(218, 51, 51);
-            font-size: 2rem;
-}
-        .conatiner {
-          
-            margin-bottom: 40px;
-
-
-
-            overflow-y: auto;
-
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-
-
-
-        }
-
-        .conatiner1 {
-            position: relative;
-            top: 120px;
-
-
-
-            width: 100%;
-            min-height: 80vh;
-            overflow-y: auto;
-
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-
-
-
-        }
-
-        .box {
-            display: flex;
-            width: 750px;
-            height: 300px;
-            justify-content: space-around;
-            align-items: center;
-
-            gap: 30%;
-            border-radius: 40px;
-
-        }
-
-        .box h1 {
-            color: rgb(65, 62, 62);
-        }
-
-        .page {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: auto;
-            flex-direction: column;
-        }
-
-        .button:active {
-            transform: scale(0.9);
-        }
-
-        th {
-            background-color: #4238a9;
-            color: white;
-
-
-            display: flexbox;
-            justify-content: center;
-
-
-        }
-
-        tr {
-
-            font-size: 1rem;
-
-        }
-
-
-        tr:nth-child(odd) {
-            background-color: #eee;
-        }
-
-        tr:nth-child(even) {
-            background-color: #fff;
-        }
-
-        tr:hover {
-            background-color: #ffff99;
-        }
-
-   
-
-        .best_item {
-            font-size: 1.2rem;
-        }
-
-        .flipkart_data {
-
-            width: 100%;
-        }
-
-        .flipkart_data td {
-            font-size: 1rem;
-        }
-        .home {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
     
-    min-height: 100vh;
-    align-items: center;
-    z-index: -1;
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-}
-.home .content {
-    flex: 1 2 40rem;
-    padding-top: 1rem;
-    z-index: 1;
-    margin-left: 2rem;
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 
-}
-
-.home .image {
-    flex: 1 1 40rem;
-    z-index: 1;
-}
-
-.home .image img {
-    width: 90%;
-    margin-left: 3rem;
-    object-fit: contain;
-    mix-blend-mode: color-burn;
-}
-
-
-
-
-.home .content h2 {
-    font-size: 2.7rem;
-    font-weight: 800;
-    color: #002057;
-}
-
-
-
-.home .content p {
-    font-size: 1.2rem;
-    color: #000;
-    font-weight: 600;
-    padding: 1rem 0;
-}
-
-.home .content p span {
-font-size: 1.5rem;
-    color: rgb(148, 8, 8);
-
-    padding: 1rem 0;
-}
-
-
-
-
-
-
-
-
-
-@keyframes ldio-x2m7cibcbfs {
-  0% { opacity: 1 }
-  100% { opacity: 0 }
-}
-.ldio-x2m7cibcbfs div {
-  left: 94px;
-  top: 48px;
-  position: absolute;
-  animation: ldio-x2m7cibcbfs linear 1s infinite;
-  background: #fe718d;
-  width: 12px;
-  height: 24px;
-  border-radius: 6px / 12px;
-  transform-origin: 6px 52px;
-}.ldio-x2m7cibcbfs div:nth-child(1) {
-  transform: rotate(0deg);
-  animation-delay: -0.9166666666666666s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(2) {
-  transform: rotate(30deg);
-  animation-delay: -0.8333333333333334s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(3) {
-  transform: rotate(60deg);
-  animation-delay: -0.75s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(4) {
-  transform: rotate(90deg);
-  animation-delay: -0.6666666666666666s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(5) {
-  transform: rotate(120deg);
-  animation-delay: -0.5833333333333334s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(6) {
-  transform: rotate(150deg);
-  animation-delay: -0.5s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(7) {
-  transform: rotate(180deg);
-  animation-delay: -0.4166666666666667s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(8) {
-  transform: rotate(210deg);
-  animation-delay: -0.3333333333333333s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(9) {
-  transform: rotate(240deg);
-  animation-delay: -0.25s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(10) {
-  transform: rotate(270deg);
-  animation-delay: -0.16666666666666666s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(11) {
-  transform: rotate(300deg);
-  animation-delay: -0.08333333333333333s;
-  background: #fe718d;
-}.ldio-x2m7cibcbfs div:nth-child(12) {
-  transform: rotate(330deg);
-  animation-delay: 0s;
-  background: #fe718d;
-}
-.loadingio-spinner-spinner-zfrarymzoxc {
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-  overflow: hidden;
-  background: #ffffff;
-}
-.ldio-x2m7cibcbfs {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform: translateZ(0) scale(1);
-  backface-visibility: hidden;
-  transform-origin: 0 0; /* see note above */
-}
-.ldio-x2m7cibcbfs div { box-sizing: content-box; }
-/* generated by https://loading.io/ */
-    </style>
 </head>
 
 <body>
 
     <header>
-        <a href="/" class="logo"><i class="fas fa-university"></i> product hunter </a>
+        <a href="/" class="logo">Product Hunting </a>
 
         <nav class="navbar">
 
@@ -444,57 +36,222 @@ font-size: 1.5rem;
         </nav>
 
     </header>
- <div class="conatiner_mar">
 
-     <marquee behavior="services" direction="left">
-         
-         this is the website to check the price of prouct in many sides and gives the best result and best price of product this website is not legal not use in on production work
-         
-        </marquee>
-    </div>
-   
+    <section class="hero" style="background-image: url({{url_for('static',filename='/image/a6.jpg')}})  ">
+        
 
 
-    <div class="productsearch">
-        <form class="productform" action="/gettext" method="post">
-            <input type="text" placeholder="product name" name="text_data" id="product">
-            <input type="submit" value="search" class="button" id="click">
-        </form>
-        <p>{{error}}</p>
-        <div class="loadingio-spinner-spinner-zfrarymzoxc" style="display: none;" id="element"><div class="ldio-x2m7cibcbfs">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            </div></div>
-    </div>
-    <div class="conatiner">
 
-        <section class="home" id="home">
-            <div class="image">
-                <img class="tilt" src="{{ url_for('static', filename='/image/Online shopping-bro.png')}}" alt="">
-            </div>
+        </div>
 
-            <div class="content">
-                <p> <span> the world together <br> with innovative  experiences </span></p>
-                <h2>How easily can i make 
-                    Product Searching</h2>
-                    <p>it i transition are driving the growth <br>  as you read this. We enables digital
-                         <br> needs of tomorrow,today.</p>
-                       
-                        
-                        
+    </section>
+
+    <section class="productsearch">
+        <div class="context">
+
+            <h1>Find your product here</h1>
+            <span class="span">get the best offer of your product</span>
+
+            <form class="productform" action="/gettext" method="post">
+                <input type="text" placeholder="product name" name="text_data" id="product">
+                <input type="submit" value="search" class="button" id="click">
+            </form>
+            <p>{{error}}</p>
+            <br>
+
+            <h3> We are Supporting - </h3>
+            <span><a href="https://www.flipkart.com/"><img
+                        src="https://www.freepnglogos.com/uploads/flipkart-logo-png/flipkart-logo-transparent-vector-3.png"
+                        width="250" alt="flipkart logo transparent vector" /></a><a href="https://www.amazon.in/"><img
+                        src="https://www.freepnglogos.com/uploads/amazon-png-logo-vector/amazon-png-logo-vector-1.png"
+                        width="250" alt="amazon png logo vector"></a></span>
+
+
+        </div>
+
+
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section>
+
+        <div class="conatiner">
+
+            <section class="home" id="home">
+                <div class="image">
+                    
+                    <img class="tilt" src="{{url_for('static',filename='/image/Online shopping-bro.png')}}" alt="">
+                </div>
+
+                <div class="content">
+                    <p> <span> the world together <br> with innovative experiences </span></p>
+                    <h2>How easily can i make
+                        Product Searching</h2>
+                    <p>it i transition are driving the growth <br> as you read this. We enables digital
+                        <br> needs of tomorrow,today.
+                    </p>
+
+
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </section>
+    <section>
+
+        <div class="conatiner">
+
+            <section class="home" id="home1">
+
+
+                <div class="content" style="margin-left: 120px;">
+                    <p> <span> the world together <br> with innovative experiences </span></p>
+                    <h2>How easily can i make
+                        Product Searching</h2>
+                    <p>it i transition are driving the growth <br> as you read this. We enables digital
+                        <br> needs of tomorrow,today.
+                    </p>
+
+
+
+                </div>
+                <div class="image">
+                    <video class="tilt" autoplay loop muted>
+                        {{url_for('static',filename='/video/1.mp4')}}
+                        <source src=" {{url_for('static',filename='/video/1.mp4')}}" type="video/mp4">
+
+                    </video>
+                </div>
+
+            </section>
+
+        </div>
+
+    </section>
+    <section class="main-container">
+        <div class="card-container">
+            <div class="pricing-card card-01">
+                <div class="pricing">
+                    <div class="price">
+                        <sup>
+                            $
+                        </sup>
+                        <span> 12</span>
                     </div>
-                   
-                </section>
-                
+                    <p>/month</p> <span class="type">Basic</span>
+                </div>
+                <div class="card-body">
+                    <div class="top-shape"></div>
+                    <div class="card-content">
+                        <ul>
+                            <li class="active">Lorem Ipsum Dolor. <i class="uil uil-check-circle"></i></li>
+                            <li class="active">Lorem Ipsum Dolor. <i class="uil uil-check-circle"></i></li>
+                            <li class="disabled">Lorem Ipsum Dolor. <i class="uil uil-times-circle"></i></li>
+                            <li class="disabled">Lorem Ipsum Dolor. <i class="uil uil-times-circle"></i></li>
+                            <li class="disabled">Lorem Ipsum Dolor. <i class="uil uil-times-circle"></i></li>
+                        </ul> <button class="buy-btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="ribbon"></div>
             </div>
-    
-            <script>
-                $('#click').on('click', function () {
-                    
-                        $('#element').delay(2000).fadeIn();
-                    
-                });
-            </script>
-           
+            <div class="pricing-card card-02">
+                <div class="pricing">
+                    <div class="price"> <sup>$</sup> <span>20</span> </div>
+                    <p>/month</p> <span class="type">Pro</span>
+                </div>
+                <div class="card-body">
+                    <div class="top-shape"></div>
+                    <div class="card-content">
+                        <ul>
+                            <li class="active">Lorem Ipsum Dolor. <i class="uil uil-check-circle"></i></li>
+                            <li class="active">Lorem Ipsum Dolor. <i class="uil uil-check-circle"></i></li>
+                            <li class="active">Lorem Ipsum Dolor. <i class="uil uil-check-circle"></i></li>
+                            <li class="disabled">Lorem Ipsum Dolor. <i class="uil uil-times-circle"></i></li>
+                            <li class="disabled">Lorem Ipsum Dolor. <i class="uil uil-times-circle"></i></li>
+                        </ul> <button class="buy-btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="ribbon"></div>
+            </div>
+            <div class="pricing-card card-03">
+                <div class="pricing">
+                    <div class="price"> <sup> $ </sup> <span>25</span> </div>
+                    <p>/month</p> <span class="type">Premium</span>
+                </div>
+                <div class="card-body">
+                    <div class="top-shape"></div>
+                    <div class="card-content">
+                        <ul>
+                            <li class="active">Lorem Ipsum Dolor. <i class="uil uil-check-circle"></i></li>
+                            <li class="active">Lorem Ipsum Dolor. <i class="uil uil-check-circle"></i></li>
+                            <li class="active">Lorem Ipsum Dolor. <i class="uil uil-check-circle"></i></li>
+                            <li class="active">Lorem Ipsum Dolor. <i class="uil uil-check-circle"></i></li>
+                            <li class="active">Lorem Ipsum Dolor. <i class="uil uil-check-circle"></i></li>
+                        </ul> <button class="buy-btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="ribbon"></div>
+            </div>
+        </div>
+    </section>
+    <section class="footer" id="contact">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Product Hunting</h3>
+                <p>Thank you for visiting our website. Connect with me over socials. <br /> <br /> </p>
+                <div class="share">
+
+                    <a href="" class="fab fa-linkedin" aria-label="LinkedIn" id="linked" target="_blank"></a>
+
+                    <a href="" class="fas fa-envelope" aria-label="Mail" id="evelope" target="_blank"></a>
+                    <a href="" class="fab fa-instagram" aria-label="Mail" id="insta" target="_blank"></a>
+
+                    <a href="" class="fab fa-telegram-plane" aria-label="Telegram" id="telegram" target="_blank"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+                <a href="#about"><i class="fas fa-chevron-circle-right"></i> service</a>
+                <a href="#education"><i class="fas fa-chevron-circle-right"></i> contact us</a>
+                <a href="#skills"><i class="fas fa-chevron-circle-right"></i> help</a>
+
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <p> <i class="fas fa-phone"></i>+91-9456954582</p>
+                <p> <i class="fas fa-envelope"></i>a9756549615@gmail.com</p>
+                <p> <i class="fas fa-map-marked-alt"></i>muzaffarnagar,india 251001</p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
 </body>
 
 </html>
